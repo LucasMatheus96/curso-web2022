@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Exercicios HTML</title>
+        <style>
+            #conteudo{
+                padding: 30px 0px;
+
+            }
+        </style>
+        <script>
+            var oLInterval;
+            function loadChatbot() {
+              try {
+                const body = document.querySelector("body");
+                const scriptEl = document.createElement("script");
+        
+                const url = "https://botoinject.gsan.com.br/7957909596098/channel-inject.js";
+        
+                scriptEl.setAttribute("src", url);
+                scriptEl.addEventListener("load", () => {
+                  const openLS = () => {
+                    var wc = document.querySelector(".widget-container");
+                    var tb = document.querySelector(".tooltip-body");
+                    var td = document.querySelector(".tooltip-decoration");
+                    if (wc) {
+                      wc.style.left = "30px";
+                      wc.style.right = "auto";
+                    }
+                    if (tb) {
+                      tb.style = "left: 78px";
+                    }
+                    if (td) {
+                        td.style = "left: calc(0px - 3px)";
+                    }
+                  }
+                  oLInterval = setInterval(openLS, 100);
+                });
+        
+                body.appendChild(scriptEl);
+              } catch (error) {
+                
+              }
+            }
+        
+          </script>
+        
+    </head>
+
+<body onload='loadChatbo()'>
+<P>Teste</P>
+
+<a href="https://botoinject.gsan.com.br/7957909596098/channel-inject.js" target="_blank">
+    <img src="C:\Users\Basis\Desktop\Projetos\curso-web\curso-web2022\whatsap.png" alt="WhatsApp">
+</a>
+</body>
+</html>
