@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
     destination: function (req,file,callback){
         callback(null,'./upload')
     },
-    filename:function(req,file,callback){
+    filename:  function (req,file,callback){
         callback(null,`${Date.now()}_${file.originalname}`)
     }
 })
@@ -23,7 +23,7 @@ app.post('/upload', (req,res)=>{
         if(err) {
             return res.end('Ocorreu um erro')
         }
-        
+
         res.end('Concluido com sucesso.')
     }) 
 })
